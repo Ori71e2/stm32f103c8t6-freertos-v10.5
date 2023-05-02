@@ -33,9 +33,9 @@ void led_task1(void *arg)
 	while(1)                            
 	{
 		GPIO_SetBits(GPIOA, GPIO_Pin_2);
-		vTaskDelay(300/portTICK_PERIOD_MS);
+		vTaskDelay(1000/portTICK_PERIOD_MS);
 		GPIO_ResetBits(GPIOA, GPIO_Pin_2);
-		vTaskDelay(300/portTICK_PERIOD_MS);
+		vTaskDelay(1000/portTICK_PERIOD_MS);
 	}
 }
 void led_task2(void *arg)
@@ -43,9 +43,9 @@ void led_task2(void *arg)
 	while(1)                            
 	{
 		GPIO_SetBits(GPIOA, GPIO_Pin_4);
-		vTaskDelay(100/portTICK_PERIOD_MS);
+		vTaskDelay(2000/portTICK_PERIOD_MS);
 		GPIO_ResetBits(GPIOA, GPIO_Pin_4);
-		vTaskDelay(100/portTICK_PERIOD_MS);
+		vTaskDelay(2000/portTICK_PERIOD_MS);
 	}
 }
 int main(void) 
